@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Rowdies&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mandali&family=Rowdies&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #0d1e40;
+}
+#nav {
+  background-color: #12203b;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: -webkit-sticky; /* Necessário para funcionar no Safari */
+  position: fixed;
+  top: 0;
+  z-index: 100000;
+}
+#btn-mobile {
+  display: none;
+}
+#menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+#menu a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Rowdies", cursive;
+  font-size: 20px;
+  display: block;
+  padding: 15px;
+}
+#menu a:hover {
+  border-bottom: solid 1px #fff;
+}
+#menu li {
+  list-style: none;
+}
+#header img {
+  width: 100%;
+  object-fit: cover;
+}
+#servicos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #bab4b4;
+}
+.divReparos {
+  display: flex;
+  align-items: center;
+}
+.texto {
+  width: 630px;
+  font-family: "Mandali", sans-serif;
+}
+.texto h2 {
+  font-size: 64px;
+}
+.texto p {
+  font-size: 32px;
+}
+.btn {
+  margin-top: 40px;
+  background-color: #0066ff;
+  font-size: 32px;
+  width: 304px;
+  height: 74px;
+  border-radius: 40px;
+  border: none;
+  color: #fff;
+}
+.btn:hover {
+  background-color: #0052cc;
+}
+#reparosGerais,
+#acessorios {
+  margin-top: 30px;
+}
+#reparosGerais img {
+  width: 400px;
+  margin-right: 200px;
+}
+#nossaLoja {
+  background-color: #0d1e40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: "Mandali", sans-serif;
+  flex-direction: column;
+}
+#nossaLoja h1 {
+  font-size: 64px;
+  margin-top: 20px;
+  border-bottom: solid 1px #ccc;
+}
+#nossaLoja p {
+  margin-top: 60px;
+  font-size: 36px;
+}
+.containerImgs {
+  display: flex;
+  flex-direction: column;
+}
+#imagensLoja {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+}
+.containerImgs img {
+  width: 526px;
+  height: 526px;
+  margin-top: 50px;
+}
+footer {
+  margin-top: 70px;
+  background-color: #0a1833;
+  height: 100px;
+}
+
+@media (max-width: 1345px) {
+  #imagensLoja {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1300px) {
+  .divReparos {
+    flex-direction: column;
+  }
+  #acessorios,
+  #trocaTelas {
+    flex-direction: column-reverse;
+  }
+  #acessorios {
+    padding: 0 0 40px 0px;
+  }
+}
+
+@media (max-width: 700px) {
+  #menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0px;
+    background: #12203b;
+    height: 0px;
+    z-index: 10000;
+    transition: 0.6s;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  #nav.active #menu {
+    height: 100vh;
+    visibility: visible;
+    overflow-y: auto;
+  }
+  #menu a {
+    padding: 20px 0;
+    margin: 0 16px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+  }
+  #btn-mobile {
+    display: flex;
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 8px;
+    color: #fff;
+  }
+  #hamburguer {
+    width: 20px;
+    display: block;
+    border-top: 2px solid #fff;
+  }
+  #hamburguer::after,
+  #hamburguer::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    margin-top: 5px;
+    background-color: currentColor;
+    transition: 0.3s;
+    position: relative;
+  }
+  #nav.active #hamburguer {
+    border-top: transparent;
+  }
+  #nav.active #hamburguer::before {
+    transform: rotate(135deg);
+  }
+  #nav.active #hamburguer::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+}
