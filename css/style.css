@@ -136,7 +136,7 @@ footer {
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1310px) {
   .divReparos {
     flex-direction: column;
   }
@@ -147,9 +147,16 @@ footer {
   #acessorios {
     padding: 0 0 40px 0px;
   }
+  .texto h2 {
+    font-size: 32px;
+  }
+  .texto p {
+    font-size: 16px;
+  }
 }
-
-@media (max-width: 700px) {
+@media (max-width: 850px) {
+}
+@media (max-width: 769px) {
   #menu {
     display: block;
     position: absolute;
@@ -208,5 +215,35 @@ footer {
   #nav.active #hamburguer::after {
     transform: rotate(-135deg);
     top: -7px;
+  }
+}
+@media (max-width: 446px) {
+  #servicos img {
+    width: 200px;
+  }
+  .texto h2 {
+    font-size: 15px;
+  }
+  .texto p {
+    font-size: 10px;
+    width: 230px;
+  }
+  #nossaLoja h1 {
+    font-size: 46px;
+  }
+  #nossaLoja p {
+    font-size: 20px;
+  }
+  .containerImgs img {
+    width: 230px;
+    height: 230px;
+    margin-top: 50px;
+  }
+  .btn {
+    margin-top: 20px;
+    font-size: 16px;
+    width: 150px;
+    height: 37px;
+    border-radius: 40px;
   }
 }
